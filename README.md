@@ -9,7 +9,7 @@
 - [References](#references)
 
 ## Getting Started
-- Computational Geometry Library have three stuff:
+- Computational Geometry Library has three stuff:
   1. [Computional Geomerty Summary](https://github.com/basmaashouur/ComputationalGeometryLibrary/blob/master/CGsummary.md) Which is a list of computational geometry sup topic's resources, tags, terminologies and explanations.
   2. [Computional Geomerty Codes](https://github.com/basmaashouur/ComputationalGeometryLibrary/blob/master/CGcodes.md) Which is a file contains code snippets of the computational geometry codes.
   3. [Computional Geomerty Solver](https://github.com/basmaashouur/ComputationalGeometryLibrary/tree/master/CGsolver) Which is a program to solve computational geometry problems.
