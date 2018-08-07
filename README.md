@@ -5,8 +5,9 @@
 - [Pre Requirements](#pre-requirements)
 - [Compile And Run](#compile-and-run)
 - [Contribution](#contribution)
-- [Licence](#licence)
 - [References](#references)
+- [Licence](#licence)
+
 
 ## Getting Started
 - Computational Geometry Library has three stuff:
@@ -41,12 +42,6 @@ g++ main.o Tools.o Points.o Lines.o Segments.o Rectangle.o Triangles.o Circles.o
 ## Contribution
 - Feel free to dive in! [Open an issue](https://github.com/basmaashouur/ComputationalGeometrySolver/issues/new) or submit PRs.
 
-## Licence
-
-[![Creative Commons Attribution 4.0 International](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
-
-Computational Geometry Library is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
-
 ## References
 - [Competitive Programming 3](https://cpbook.net/#CP3details)
 - [Programming Challenges](https://www.amazon.com/Programming-Challenges-Contest-Training-Computer/dp/0387001638)
@@ -54,5 +49,13 @@ Computational Geometry Library is licensed under a [Creative Commons Attribution
 - [Geometry Algorithms](http://geomalgorithms.com/index.html)
 - [Geometry Topics](https://en.wikipedia.org/wiki/List_of_geometry_topics)
 - [GeeksforGeeks](https://www.geeksforgeeks.org/geometric-algorithms/)
-- [Stackoverflow](https://stackoverflow.com/) 
+- [Stackoverflow](https://stackoverflow.com/)
+
+## Licence
+
+[![Creative Commons Attribution 4.0 International](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
+
+Computational Geometry Library is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+ 
 
