@@ -13,7 +13,6 @@ struct point
 class Points
 {
 public:
-	string choice;
 
 	// Constructor
 	//Points() ;
@@ -29,5 +28,6 @@ public:
 	void rotate();
 private:
 	Tools tool;
+	string choice;
 
 };

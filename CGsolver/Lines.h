@@ -8,7 +8,6 @@ struct line { double a, b, c; };
 class Lines
 {
 public:
-	string choice;
 
 	// Constructor
 	//Lines() ;
@@ -29,4 +28,5 @@ public:
 	void areIntersect();
 private:
 	Tools tool;
+	string choice;
 };

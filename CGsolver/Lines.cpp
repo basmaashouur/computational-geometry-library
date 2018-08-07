@@ -73,7 +73,6 @@ void Lines::areParallel()
 	bool check = areParallel(l1, l2);
 	if (check)cout << "The two line are Parallel\n";
 	else cout << "The two line are not Parallel\n";
-	tool.back("line");
 }
 
 bool Lines::areSame(line l1, line l2)
@@ -82,7 +81,6 @@ bool Lines::areSame(line l1, line l2)
 }
 void Lines::areSame()
 {
-	tool.back("line");
 }
 
 bool Lines::areIntersect(line l1, line l2, point &p)
@@ -91,6 +89,5 @@ bool Lines::areIntersect(line l1, line l2, point &p)
 }
 void Lines::areIntersect()
 {
-	tool.back("line");
 }
 

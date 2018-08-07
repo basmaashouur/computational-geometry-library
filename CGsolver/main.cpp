@@ -16,9 +16,9 @@ void scanShape();
 void points()
 {
 	Points points1;
-	cout << "Back                          --> enter 0\n";
-	cout << "Find Euclidean Distance       --> enter 1\n";
-	cout << "Point Rotation                --> enter 2\n";
+	cout << "Back                                            --> enter 0\n";
+	cout << "Point Rotation                                  --> enter 1\n";
+	cout << "Find Euclidean Distance betwenn two points      --> enter 2\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")
@@ -27,11 +27,15 @@ void points()
 	}
 	else if (choice == "1")
 	{
-		points1.dist();
+		points1.rotate();
+		tool.makeEndl();
+		points();
 	}
 	else if (choice == "2")
 	{
-		points1.rotate();
+		points1.dist();
+		tool.makeEndl();
+		points();
 	}
 	else
 	{
@@ -57,14 +61,20 @@ void lines()
 	else if (choice == "1")
 	{
 		lines1.areParallel();
+		tool.makeEndl();
+		lines();
 	}
 	else if (choice == "2")
 	{
 		lines1.areSame();
+		tool.makeEndl();
+		lines();
 	}
 	else if (choice == "3")
 	{
 		lines1.areIntersect();
+		tool.makeEndl();
+		lines();
 	}
 	else
 	{
@@ -111,18 +121,26 @@ void rectangles()
 	else if (choice == "1")
 	{
 		rec.areaAndPerimeter();
+		tool.makeEndl();
+		rectangles();
 	}
 	else if (choice == "2")
 	{
 		rec.overlapRectangles();
+		tool.makeEndl();
+		rectangles();
 	}
 	else if (choice == "3")
 	{
 		rec.segmentsMakeRectangle();
+		tool.makeEndl();
+		rectangles();
 	}
 	else if (choice == "4")
 	{
 		rec.pointInsideRectangle();
+		tool.makeEndl();
+		rectangles();
 	}
 	else
 	{

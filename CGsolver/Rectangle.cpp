@@ -78,7 +78,6 @@ void Rectangle::areaAndPerimeter()
     cout << "The Perimeter of the rectangle that has width = " << width << " & hight = "
          << hight << " is " << 2 * hight + 2 * width << endl;
 
-    tool.back("rec");
 }
 
 void Rectangle::overlapRectangles()
@@ -88,17 +87,14 @@ void Rectangle::overlapRectangles()
     rec1 = scanCorners();
     cout << "Enter the second rectangle\n";
     rec2 = scanCorners();
-    tool.back("rec");
 
 }
 
 void Rectangle::segmentsMakeRectangle()
 {
-    tool.back("rec");
 
 }
 void Rectangle::pointInsideRectangle()
 {
-    tool.back("rec");
 
 }

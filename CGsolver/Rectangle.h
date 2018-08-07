@@ -5,7 +5,6 @@
 class Rectangle
 {
 public:
-	string choice;
 
 	// Defualt constructor
 	//Rectangle() ;
@@ -29,5 +28,7 @@ public:
 	void pointInsideRectangle();
 private:
 	Tools tool;
+	string choice;
+
 };
 

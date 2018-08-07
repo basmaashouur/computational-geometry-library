@@ -8,10 +8,14 @@ using namespace std;
 class Tools
 {
 public:
-	string choice;
 	// Function to handle wrong choices
 	void wrongChoice(string cho);
 	// Function to clear screen
 	void clearScreen();
-	void back(string shape);
+	// Function to make new line
+	void makeEndl();
+
+private:
+	string choice;
+
 };

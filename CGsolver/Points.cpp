@@ -23,8 +23,7 @@ void Points::dist()
 	point p1 = scanPoint();
 	point p2 = scanPoint();
 	double ecdist = dist(p1, p2);
-	cout << "The Euclidean Distance betwenn those two points is " << ecdist << endl;
-	tool.back("point");
+	cout << "The Euclidean Distance between those two points is " << ecdist << endl;
 }
 
 // Angles convertion from 360 to rad
@@ -47,5 +46,4 @@ void Points::rotate()
 	cout << "The point (" << p1.x << "," << p1.y << ") after rotation by "
 	     << theta << "° is now point (" << ans.x << "," << ans.y << ")\n";
 
-	tool.back("point");
 }
