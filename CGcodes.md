@@ -148,6 +148,7 @@ point rotate(point p, double theta)
 ```
 ### Distance To Line
 - Two points a and b (a and b must be different) to make a line, find the closet point to line
+- Like closestPoint function but it's in a points form instead of standard line form
 ```cpp
 vec toVec(point a, point b){return vec(b.x - a.x, b.y - a.y);}
 
@@ -377,6 +378,7 @@ bool areIntersect(line l1, line l2, point &p)
 ```
 ### Closet Point To Line
 - We have 3 cases Vertical, Horizontal or Normal line
+- Like distToLine function but it's in a  line standard form instead of points form
 ```cpp
 bool areParallel(line l1, line l2)
 {
