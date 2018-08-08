@@ -6,8 +6,14 @@ Structs
 
 point::point() { x = y = 0.0; };
 point::point(double _x, double _y) : x(_x), y(_y) {};
-vec::vec(double _x, double _y) : x(_x), y(_y) {};
+bool point::operator < (point other) const
+{
+	if (fabs(x - other.x) > EPS)
+		return x < other.x;
+	return y < other.y;
+}
 
+vec::vec(double _x, double _y) : x(_x), y(_y) {};
 
 /*
 Points Functions
@@ -155,7 +161,7 @@ bool Points::pointOnLineSegment(point p1, point s1, point s2)
 }
 void Points::pointOnLineSegment()
 {
-	point p, a, b; check bool;
+	point p, a, b; bool check;
 	p = scanPoint();
 	cout << "Enter the line segments in a Points form, two points make a Line segment\n";
 	a = scanPoint();
