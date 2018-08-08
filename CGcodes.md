@@ -244,6 +244,11 @@ bool pointOnSegment(Point p, Point q, Point r)
 ### Point On Line
 -
 ```cpp
+
+bool pointOnLine(point p, point q, point r)
+{
+	return collinear(p, q, r)
+}
 ```
 ### Point On Ray
 -
