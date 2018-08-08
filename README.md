@@ -1,4 +1,5 @@
 # Computational Geometry Library 
+## A Geometry Toolkit for Competitive Programming
 ![](imgs/background.jpg)
 
 ## Table of Contents
