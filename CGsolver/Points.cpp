@@ -53,7 +53,7 @@ point Points::rotate(point p, double theta)
 void Points::rotate()
 {
 	point ans, p1 = scanPoint();
-	cout << "Enter the rotation theta \n";
+	cout << "Enter the rotation theta in Degress\n";
 	double theta; cin >> theta;
 	ans = rotate(p1, theta);
 	cout << "The point (" << p1.x << "," << p1.y << ") after rotation by "

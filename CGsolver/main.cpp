@@ -21,58 +21,21 @@ void points()
 	cout << "2- Find Euclidean Distance between two Points               --> enter 2\n";
 	cout << "3- Find the closet Point to a Point that is on a Line       --> enter 3\n";
 	cout << "4- Find the closet Point to a Point that is on a Segment    --> enter 4\n";
-	cout << "5- Find if Points are Collinear                             --> enter 5\n";
-	cout << "6- Find if Point is on a Line                               --> enter 6\n";
-	cout << "7- Find if Point is on a Segment                            --> enter 7\n";
+	cout << "5- Check if Points are Collinear                            --> enter 5\n";
+	cout << "6- Check if Point is on a Line                              --> enter 6\n";
+	cout << "7- Cheeck if Point is on a Segment                           --> enter 7\n";
 	//cout << "8- Find if Point is on a Ray                                --> enter 8\n";
 	cin >> choice;
 	tool.clearScreen();
-	if (choice == "0")
-	{
-		scanShape();
-	}
-	else if (choice == "1")
-	{
-		points1.rotate();
-		tool.makeEndl();
-		points();
-	}
-	else if (choice == "2")
-	{
-		points1.dist();
-		tool.makeEndl();
-		points();
-	}
-	else if (choice == "3")
-	{
-		points1.distToLine();
-		tool.makeEndl();
-		points();
-	}
-	else if (choice == "4")
-	{
-		points1.distToLineSegment();
-		tool.makeEndl();
-		points();
-	}
-	else if (choice == "5")
-	{
-		points1.collinear();
-		tool.makeEndl();
-		points();
-	}
-	else if (choice == "6")
-	{
-		points1.pointOnLine();
-		tool.makeEndl();
-		points();
-	}
-	else if (choice == "7")
-	{
-		points1.pointOnLineSegment();
-		tool.makeEndl();
-		points();
-	}
+	if (choice == "0")scanShape();
+	else if (choice == "1")points1.rotate();
+	else if (choice == "2")points1.dist();
+	else if (choice == "3")points1.distToLine();
+	else if (choice == "4")points1.distToLineSegment();
+	else if (choice == "5")points1.collinear();
+	else if (choice == "6")points1.pointOnLine();
+	else if (choice == "7")points1.pointOnLineSegment();
+
 	/*
 	else if (choice == "8")
 	{
@@ -85,43 +48,38 @@ void points()
 		tool.wrongChoice(choice);
 		points();
 	}
-
+	if (choice > "0" && choice < "8")
+	{
+		tool.makeEndl();
+		points();
+	}
 }
 
 void lines()
 {
 	Lines lines1;
-	cout << "0- Back                          --> enter 0\n";
-	cout << "1- Check Parallel Lines          --> enter 1\n";
-	cout << "2- Check Same Lines              --> enter 2\n";
-	cout << "3- Check Intersect Lines         --> enter 3\n";
+	cout << "0- Back                         --> enter 0\n";
+	cout << "1- Check Parallel Lines         --> enter 1\n";
+	cout << "2- Check Same Lines             --> enter 2\n";
+	cout << "3- Find if two Lines intersect  --> enter 3\n";
+	cout << "4- Find Closet Point to a Line  --> enter 4\n";
+	cout << "5- Find the angle of two lines  --> enter 5\n";
 	cin >> choice;
 	tool.clearScreen();
-	if (choice == "0")
-	{
-		scanShape();
-	}
-	else if (choice == "1")
-	{
-		lines1.areParallel();
-		tool.makeEndl();
-		lines();
-	}
-	else if (choice == "2")
-	{
-		lines1.areSame();
-		tool.makeEndl();
-		lines();
-	}
-	else if (choice == "3")
-	{
-		lines1.areIntersect();
-		tool.makeEndl();
-		lines();
-	}
+	if (choice == "0")scanShape();
+	else if (choice == "1")lines1.areParallel();
+	else if (choice == "2")lines1.areSame();
+	else if (choice == "3")lines1.areIntersect();
+	else if (choice == "4")lines1.closestPoint();
+	else if (choice == "5")lines1.angle();
 	else
 	{
 		tool.wrongChoice(choice);
+		lines();
+	}
+	if (choice > "0" && choice < "6")
+	{
+		tool.makeEndl();
 		lines();
 	}
 }
@@ -132,18 +90,18 @@ void segments()
 	cout << "0- Back             --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
-	if (choice == "0")
-	{
-		scanShape();
-	}
-	else if (choice == "1")
-	{
-
-	}
+	if (choice == "0")scanShape();
+	else if (choice == "1") {}
 	else
 	{
 		tool.wrongChoice(choice);
 		segments();
+	}
+	if (choice > "0" && choice < "1")
+	{
+		tool.makeEndl();
+		segments();
+
 	}
 }
 
@@ -157,58 +115,40 @@ void rectangles()
 	cout << "4- Check if a Point is Inside a Rectangle    --> enter 4\n";
 	cin >> choice;
 	tool.clearScreen();
-	if (choice == "0")
-	{
-		scanShape();
-	}
-	else if (choice == "1")
-	{
-		rec.areaAndPerimeter();
-		tool.makeEndl();
-		rectangles();
-	}
-	else if (choice == "2")
-	{
-		rec.overlapRectangles();
-		tool.makeEndl();
-		rectangles();
-	}
-	else if (choice == "3")
-	{
-		rec.segmentsMakeRectangle();
-		tool.makeEndl();
-		rectangles();
-	}
-	else if (choice == "4")
-	{
-		rec.pointInsideRectangle();
-		tool.makeEndl();
-		rectangles();
-	}
+	if (choice == "0")scanShape();
+	else if (choice == "1")rec.areaAndPerimeter();
+	else if (choice == "2")rec.overlapRectangles();
+	else if (choice == "3")rec.segmentsMakeRectangle();
+	else if (choice == "4")rec.pointInsideRectangle();
 	else
 	{
 		tool.wrongChoice(choice);
 		rectangles();
+	}
+	if (choice > "0" && choice < "5")
+	{
+		tool.makeEndl();
+		rectangles();
+
 	}
 }
 
 void triangles()
 {
 	Triangles tri;
-	cout << "0- Back              --> enter 0\n";
+	cout << "0- Back      --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
-	if (choice == "0")
-	{
-		scanShape();
-	}
-	else if (choice == "1")
-	{
-
-	}
+	if (choice == "0")scanShape();
+	else if (choice == "1") {}
 	else
 	{
 		tool.wrongChoice(choice);
+		triangles();
+	}
+	if (choice > "0" && choice < "2")
+	{
+		tool.makeEndl();
 		triangles();
 	}
 }
@@ -216,45 +156,42 @@ void triangles()
 void circles()
 {
 	Circles cir;
-	cout << "0- Back            --> enter 0\n";
+	cout << "0- Back    --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
-	if (choice == "0")
-	{
-		scanShape();
-	}
-	else if (choice == "1")
-	{
-
-	}
+	if (choice == "0")scanShape();
+	else if (choice == "1") {}
 	else
 	{
 		tool.wrongChoice(choice);
 		circles();
 	}
-
+	if (choice > "0" && choice < "1")
+	{
+		tool.makeEndl();
+		circles();
+	}
 }
 
 void quadlitrals()
 {
 	Quadlitrals quad;
-	cout << "0- Back             --> enter 0\n";
+	cout << "0- Back      --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
-	if (choice == "0")
-	{
-		scanShape();
-	}
-	else if (choice == "1")
-	{
-
-	}
+	if (choice == "0")scanShape();
+	else if (choice == "1") {}
 	else
 	{
 		tool.wrongChoice(choice);
 		quadlitrals();
 	}
+	if (choice > "0" && choice < "1")
+	{
+		tool.makeEndl();
+		quadlitrals();
 
+	}
 }
 
 void polygons()
@@ -263,20 +200,19 @@ void polygons()
 	cout << "0- Back          --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
-	if (choice == "0")
-	{
-		scanShape();
-	}
-	else if (choice == "1")
-	{
-
-	}
+	if (choice == "0")scanShape();
+	else if (choice == "1") {}
 	else
 	{
 		tool.wrongChoice(choice);
 		polygons();
 	}
+	if (choice > "0" && choice < "6")
+	{
+		tool.makeEndl();
+		polygons();
 
+	}
 }
 
 void scanShape()
