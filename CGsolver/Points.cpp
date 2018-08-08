@@ -33,6 +33,7 @@ double Points::dist(point p1, point p2)
 }
 void Points::dist()
 {
+	cout << "2- Find Euclidean Distance between two Points\n\n";
 	point p1 = scanPoint();
 	point p2 = scanPoint();
 	double ecdist = dist(p1, p2);
@@ -52,6 +53,7 @@ point Points::rotate(point p, double theta)
 }
 void Points::rotate()
 {
+	cout << "1- Find Point Rotation\n\n";
 	point ans, p1 = scanPoint();
 	cout << "Enter the rotation theta in Degress\n";
 	double theta; cin >> theta;
@@ -72,6 +74,7 @@ double Points::distToLine(point p, point a, point b, point &c)
 }
 void Points::distToLine()
 {
+	cout << "3- Find the closet Point to a Point that is on a Line\n\n";
 	point p, a, b, ans;
 	p = scanPoint();
 	cout << "Enter the line in a Points form, two points make a line\n";
@@ -103,6 +106,7 @@ double Points::distToLineSegment(point p, point a, point b, point &c)
 }
 void Points::distToLineSegment()
 {
+	cout << "4- Find the closet Point to a Point that is on a Segment\n\n";
 	point p, a, b, ans;
 	p = scanPoint();
 	cout << "Enter the line segments in a Points form, two points make a segment\n";
@@ -121,6 +125,7 @@ bool Points::collinear(point p, point q, point r)
 }
 void Points::collinear()
 {
+	cout << "5- Check if Points are Collinear\n\n";
 	bool check = true; point p, q, r;
 	cout << "Enter the line in a Points form, two points make a line\n";
 	p = scanPoint();
@@ -140,6 +145,7 @@ void Points::collinear()
 
 void Points::pointOnLine()
 {
+	cout << "6- Check if Point is on a Line\n\n";
 	bool check; point p, q, r;
 	r = scanPoint();
 	cout << "Enter the line in a Points form, two points make a line\n";
@@ -161,6 +167,7 @@ bool Points::pointOnLineSegment(point p1, point s1, point s2)
 }
 void Points::pointOnLineSegment()
 {
+	cout << "7- Check if Point is on a Segment\n\n";
 	point p, a, b; bool check;
 	p = scanPoint();
 	cout << "Enter the line segments in a Points form, two points make a Line segment\n";
@@ -177,6 +184,7 @@ bool Points::pointOnRay(point p1, point s1, point s2)
 }
 void Points::pointOnRay()
 {
+	cout << "8- Find if Point is on a Ray\n\n";
 
 }
 

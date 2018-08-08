@@ -23,7 +23,7 @@ void points()
 	cout << "4- Find the closet Point to a Point that is on a Segment    --> enter 4\n";
 	cout << "5- Check if Points are Collinear                            --> enter 5\n";
 	cout << "6- Check if Point is on a Line                              --> enter 6\n";
-	cout << "7- Cheeck if Point is on a Segment                           --> enter 7\n";
+	cout << "7- Check if Point is on a Segment                           --> enter 7\n";
 	//cout << "8- Find if Point is on a Ray                                --> enter 8\n";
 	cin >> choice;
 	tool.clearScreen();

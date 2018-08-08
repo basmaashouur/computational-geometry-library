@@ -72,6 +72,7 @@ bool Lines::areParallel(line l1, line l2)
 
 void Lines::areParallel()
 {
+	cout << "1- Check Parallel Lines\n\n";
 	line l1, l2; bool check;
 	cout << "Enter the first line\n";
 	l1 = scanLine();
@@ -89,6 +90,7 @@ bool Lines::areSame(line l1, line l2)
 }
 void Lines::areSame()
 {
+	cout << "2- Check Same Lines\n\n";
 	line l1, l2; bool check;
 	cout << "Enter the first line\n";
 	l1 = scanLine();
@@ -112,6 +114,7 @@ bool Lines::areIntersect(line l1, line l2, point &p)
 }
 void Lines::areIntersect()
 {
+	cout << "3- Find if two Lines intersect\n\n";
 	point p; line l1, l2; bool check;
 	cout << "Enter the first line\n";
 	l1 = scanLine();
@@ -144,6 +147,7 @@ void Lines::closestPoint(line l, point p, point &ans)
 }
 void Lines::closestPoint()
 {
+	cout << "4- Find Closet Point to a Line\n\n";
 	line l; point p, ans;
 	cout << "Enter the line\n";
 	l = scanLine();
@@ -160,6 +164,7 @@ double Lines::angle(point a, point o, point b)
 }
 void Lines::angle()
 {
+	cout << "5- Find the angle of two lines\n\n";
 	cout << "Enter the two rays in points form.\n"
 	     << "Three points can make a two rays that have the same beginning point";
 	point a, o, b;
