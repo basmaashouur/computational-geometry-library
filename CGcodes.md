@@ -9,7 +9,6 @@ Table of Contents
    + [Reflection Point](#reflection-point)
    + [Distance To Line](#distance-to-line)
    + [Distance To Line Segment](#distance-to-line-segment)
-   + [Two Lines Angle](#two-lines-angle)
    + [Collinear](#collinear)
    + [Counter Clockwise](#counter-clockwise)
    + [Point On Line Segment](#point-on-line-segment)
@@ -30,9 +29,10 @@ Table of Contents
    + [Parallel Lines](#parallel-lines)
    + [Same Lines](#same-lines)
    + [Intersect Lines](#intersect-lines)
-   + [Intersect Lines Segment](#intersect-lines-segment)
    + [Closet Point To Line](#closet-point-to-line)
+   + [Two Lines Angle](#two-lines-angle)
  - [Segments](#segments)
+   + [Intersect Lines Segment](#intersect-lines-segment)
  - [Triangles](#triangles)
  - [Rectangles](#rectangles)
  - [Circles](#circles)
@@ -190,24 +190,7 @@ double distToLineSegment(point p, point a, point b, point &c)
 }
 
 ```
-### Two Lines Angle
-- The angle between two lines
-```cpp
-#define PI acos(-1.0)
 
-vec toVec(point a, point b) {return vec(b.x - a.x, b.y - a.y);}
-
-double dot(vec a, vec b) { return (a.x * b.x + a.y * b.y); }
-
-double norm_sq(vec v) { return v.x * v.x + v.y * v.y; }
-
-double angle(point a, point o, point b) 
-{  // returns angle aob in rad
-	vec oa = toVec(o, a), ob = toVec(o, b);
-	return acos(dot(oa, ob) / sqrt(norm_sq(oa) * norm_sq(ob)));
-}
-
-```
 ### Collinear
 - Returns true if point r is on the same line as the line pq
 ```cpp
@@ -464,6 +447,24 @@ void closestPoint(line l, point p, point &ans)
     	pointSlopeToLine(p, 1 / l.a, perpendicular); 
 	areIntersect(l, perpendicular, ans);
 }
+```
+### Two Lines Angle
+- The angle between two lines
+```cpp
+#define PI acos(-1.0)
+
+vec toVec(point a, point b) {return vec(b.x - a.x, b.y - a.y);}
+
+double dot(vec a, vec b) { return (a.x * b.x + a.y * b.y); }
+
+double norm_sq(vec v) { return v.x * v.x + v.y * v.y; }
+
+double angle(point a, point o, point b) 
+{  // returns angle aob in rad
+	vec oa = toVec(o, a), ob = toVec(o, b);
+	return acos(dot(oa, ob) / sqrt(norm_sq(oa) * norm_sq(ob)));
+}
+
 ```
 - If I have only two corners (upper left and lower right corners) of the rectangle, I can find the other two
 ```cpp
