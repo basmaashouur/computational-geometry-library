@@ -76,8 +76,6 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 * **Distance To Line Segment**
   * If the perpendicular line point from the point is on the line segment then find normal closet point
   * If the perp point not in the line segment then the answer would be the first point or the second of the segment
-* **Two Lines Angle**
-  * We can compute the angle aob given three points: a, o, and b, using dot product, Since oa · ob = |oa|×|ob| × cos(θ), we have theta = arccos(oa · ob/(|oa|×|ob|)). 
 * **Collinear**
 * **Counter Clockwise**
  ## Vectors
@@ -110,9 +108,6 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 ## Lines
 ### Definitions
 * **Line** A geometric object that is straight, infinitely long and infinitely thin and the shortest distance between any two points, points also set of points whose coordinates satisfy a given linear equation ax + by + c = 0.
-* **Line segment** A straight line which links two points without extending beyond them (has two ends) ![](imgs/segment.png)
-* **Congruent line segments** When Two line segments have the same length ![](imgs/congse.png)
-* **Midpoint in line segments** The midpoint is halfway between the two endpoints  ![](imgs/midpoint.png)
 * **Ray** A portion of a line which starts at a point and goes off in a particular direction to infinity (has one end).
 * **Note** Rays and lines cannot be congruent because they do not have both endpoints defined, and so have no definite length.
 * **Perpendicular**  A line is perpendicular to another if it meets or crosses it at right angles (90°)![](imgs/perpen.png).
@@ -143,30 +138,60 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
       * ax = mx; a = -m
       * by = y; y = 1
       * c = mx1 - y1
- * **Point To Line**
+* **Point To Line**
    * If we have the line slope and one point then we will compute the line equation
- * **Parallel Lines**
+* **Parallel Lines**
     * Check if the have the same slope
     * Check if the don't cross
- * **Same Lines** 
+* **Same Lines** 
     * Check if the have the same slope
     * Check if they cross
     * Check if they have the same hight 
- * **Intersect Lines**
+* **Intersect Lines**
    * Check if they don't have the same slope (not Parallel)
    * Check they cross on a point
    * Find that point they cross in by sloving the two linear algebraic equations togther
- * **Intersect Lines Segments**
- * **Closet Point To Line**
+* **Closet Point To Line**
    * I have a point and a line and  I wanna find a point lie in that line that the closet to that point
    * If the line is vertical then the y of the closet point is the same as the line, and x = -c
    * If the line is horizontal then the x of the closet point is the same as the line, and y = -c
    * If the line is normal:
      * Draw a line from that point to the line which is perpendicular, we know the point and the slope
      * Then find the intersection of that perpendicular line and the other line and that would be the closet point
+* **Two Lines Angle**
+  * We can compute the angle aob given three points: a, o, and b, using dot product, Since oa · ob = |oa|×|ob| × cos(θ), we have theta = arccos(oa · ob/(|oa|×|ob|)). 
+  
 ## Segments
+### Definitions
+* **Line segment** A straight line which links two points without extending beyond them (has two ends) ![](imgs/segment.png)
+* **Congruent line segments** When Two line segments have the same length ![](imgs/congse.png)
+* **Midpoint in line segments** The midpoint is halfway between the two endpoints  ![](imgs/midpoint.png)
+### Methods & Operations
+### Algorithms
+* **Intersect Lines Segments**
+ 
 ## Triangles
+### Definitions
+### Methods & Operations
+### Algorithms
+
 ## Rectangles
+### Definitions
+### Methods & Operations
+### Algorithms
+
 ## Circles
+### Definitions
+### Methods & Operations
+### Algorithms
+
 ## Quadlitrals
+### Definitions
+### Methods & Operations
+### Algorithms
+
 ## Polygons
+### Definitions
+### Methods & Operations
+### Algorithms
+

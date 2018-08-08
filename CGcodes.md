@@ -9,7 +9,6 @@ Table of Contents
    + [Reflection Point](#reflection-point)
    + [Distance To Line](#distance-to-line)
    + [Distance To Line Segment](#distance-to-line-segment)
-   + [Two Lines Angle](#two-lines-angle)
    + [Collinear](#collinear)
    + [Counter Clockwise](#counter-clockwise)
    + [Point On Line Segment](#point-on-line-segment)
@@ -30,9 +29,10 @@ Table of Contents
    + [Parallel Lines](#parallel-lines)
    + [Same Lines](#same-lines)
    + [Intersect Lines](#intersect-lines)
-   + [Intersect Lines Segment](#intersect-lines-segment)
    + [Closet Point To Line](#closet-point-to-line)
+   + [Two Lines Angle](#two-lines-angle)
  - [Segments](#segments)
+   + [Intersect Lines Segment](#intersect-lines-segment)
  - [Triangles](#triangles)
  - [Rectangles](#rectangles)
  - [Circles](#circles)
@@ -148,6 +148,7 @@ point rotate(point p, double theta)
 ```
 ### Distance To Line
 - Two points a and b (a and b must be different) to make a line, find the closet point to line
+- Like closestPoint function but it's in a points form instead of standard line form
 ```cpp
 vec toVec(point a, point b){return vec(b.x - a.x, b.y - a.y);}
 
@@ -190,24 +191,7 @@ double distToLineSegment(point p, point a, point b, point &c)
 }
 
 ```
-### Two Lines Angle
-- The angle between two lines
-```cpp
-#define PI acos(-1.0)
 
-vec toVec(point a, point b) {return vec(b.x - a.x, b.y - a.y);}
-
-double dot(vec a, vec b) { return (a.x * b.x + a.y * b.y); }
-
-double norm_sq(vec v) { return v.x * v.x + v.y * v.y; }
-
-double angle(point a, point o, point b) 
-{  // returns angle aob in rad
-	vec oa = toVec(o, a), ob = toVec(o, b);
-	return acos(dot(oa, ob) / sqrt(norm_sq(oa) * norm_sq(ob)));
-}
-
-```
 ### Collinear
 - Returns true if point r is on the same line as the line pq
 ```cpp
@@ -260,6 +244,11 @@ bool pointOnSegment(Point p, Point q, Point r)
 ### Point On Line
 -
 ```cpp
+
+bool pointOnLine(point p, point q, point r)
+{
+	return collinear(p, q, r)
+}
 ```
 ### Point On Ray
 -
@@ -392,41 +381,9 @@ bool areIntersect(line l1, line l2, point &p)
 }
 
 ```
-
-### Intersect Lines Segment
-- 
-```cpp
-bool pointOnSegment(Point p, Point q, Point r)
-{
-	if (q.x <= max(p.x, r.x) && q.x >= min(p.x, r.x) &&
-	        q.y <= max(p.y, r.y) && q.y >= min(p.y, r.y))
-		return true;
-	return false;
-}
-
-int orientation(Point p, Point q, Point r)
-{
-	int val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
-	if (val == 0) return 0;
-	return (val > 0) ? 1 : 2;
-}
-
-bool doIntersect(Point p1, Point q1, Point p2, Point q2)
-{
-	int o1 = orientation(p1, q1, p2);
-	int o2 = orientation(p1, q1, q2);
-	int o3 = orientation(p2, q2, p1);
-	int o4 = orientation(p2, q2, q1);
-	if (o1 != o2 && o3 != o4) return true;
-	if (o1 == 0 && onSegment(p1, p2, q1)) return true;
-	if (o2 == 0 && onSegment(p1, q2, q1)) return true;
-	if (o3 == 0 && onSegment(p2, p1, q2)) return true;
-	if (o4 == 0 && onSegment(p2, q1, q2)) return true;
-	return false;
-}
-```
 ### Closet Point To Line
 - We have 3 cases Vertical, Horizontal or Normal line
+- Like distToLine function but it's in a  line standard form instead of points form
 ```cpp
 bool areParallel(line l1, line l2)
 {
@@ -465,6 +422,24 @@ void closestPoint(line l, point p, point &ans)
 	areIntersect(l, perpendicular, ans);
 }
 ```
+### Two Lines Angle
+- The angle between two lines
+```cpp
+#define PI acos(-1.0)
+
+vec toVec(point a, point b) {return vec(b.x - a.x, b.y - a.y);}
+
+double dot(vec a, vec b) { return (a.x * b.x + a.y * b.y); }
+
+double norm_sq(vec v) { return v.x * v.x + v.y * v.y; }
+
+double angle(point a, point o, point b) 
+{  // returns angle aob in rad
+	vec oa = toVec(o, a), ob = toVec(o, b);
+	return acos(dot(oa, ob) / sqrt(norm_sq(oa) * norm_sq(ob)));
+}
+
+```
 - If I have only two corners (upper left and lower right corners) of the rectangle, I can find the other two
 ```cpp
 vector<point> P;
@@ -476,6 +451,38 @@ P.push_back(point(x3,y3)); // lower right corner
 p.push_back(point(x1,y3)); // lower left corner
 ```
 ## Segments
+### Intersect Lines Segment
+- 
+```cpp
+bool pointOnSegment(Point p, Point q, Point r)
+{
+	if (q.x <= max(p.x, r.x) && q.x >= min(p.x, r.x) &&
+	        q.y <= max(p.y, r.y) && q.y >= min(p.y, r.y))
+		return true;
+	return false;
+}
+
+int orientation(Point p, Point q, Point r)
+{
+	int val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
+	if (val == 0) return 0;
+	return (val > 0) ? 1 : 2;
+}
+
+bool doIntersect(Point p1, Point q1, Point p2, Point q2)
+{
+	int o1 = orientation(p1, q1, p2);
+	int o2 = orientation(p1, q1, q2);
+	int o3 = orientation(p2, q2, p1);
+	int o4 = orientation(p2, q2, q1);
+	if (o1 != o2 && o3 != o4) return true;
+	if (o1 == 0 && onSegment(p1, p2, q1)) return true;
+	if (o2 == 0 && onSegment(p1, q2, q1)) return true;
+	if (o3 == 0 && onSegment(p2, p1, q2)) return true;
+	if (o4 == 0 && onSegment(p2, q1, q2)) return true;
+	return false;
+}
+```
 ## Triangles
 ## Rectangles
 ## Circles

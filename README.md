@@ -1,4 +1,5 @@
 # Computational Geometry Library 
+![](imgs/background.jpg)
 
 ## Table of Contents
 - [Getting Started](#getting-started)
