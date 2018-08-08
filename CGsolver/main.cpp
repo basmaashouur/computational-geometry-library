@@ -16,9 +16,15 @@ void scanShape();
 void points()
 {
 	Points points1;
-	cout << "Back                                            --> enter 0\n";
-	cout << "Point Rotation                                  --> enter 1\n";
-	cout << "Find Euclidean Distance betwenn two points      --> enter 2\n";
+	cout << "0- Back                                                     --> enter 0\n";
+	cout << "1- Find Point Rotation                                      --> enter 1\n";
+	cout << "2- Find Euclidean Distance between two Points               --> enter 2\n";
+	cout << "3- Find the closet Point to a Point that is on a Line       --> enter 3\n";
+	cout << "4- Find the closet Point to a Point that is on a Segment    --> enter 4\n";
+	cout << "5- Find if Points are Collinear                             --> enter 5\n";
+	cout << "6- Find if Point is on a Line                               --> enter 6\n";
+	cout << "7- Find if Point is on a Segment                            --> enter 7\n";
+	//cout << "8- Find if Point is on a Ray                                --> enter 8\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")
@@ -37,6 +43,43 @@ void points()
 		tool.makeEndl();
 		points();
 	}
+	else if (choice == "3")
+	{
+		points1.distToLine();
+		tool.makeEndl();
+		points();
+	}
+	else if (choice == "4")
+	{
+		points1.distToLineSegment();
+		tool.makeEndl();
+		points();
+	}
+	else if (choice == "5")
+	{
+		points1.collinear();
+		tool.makeEndl();
+		points();
+	}
+	else if (choice == "6")
+	{
+		points1.pointOnLine();
+		tool.makeEndl();
+		points();
+	}
+	else if (choice == "7")
+	{
+		points1.pointOnLineSegment();
+		tool.makeEndl();
+		points();
+	}
+	/*
+	else if (choice == "8")
+	{
+		points1.pointOnRay();
+		tool.makeEndl();
+		points();
+	}*/
 	else
 	{
 		tool.wrongChoice(choice);
@@ -48,10 +91,10 @@ void points()
 void lines()
 {
 	Lines lines1;
-	cout << "Back                          --> enter 0\n";
-	cout << "Check Parallel Lines          --> enter 1\n";
-	cout << "Check Same Lines              --> enter 2\n";
-	cout << "Check Intersect Lines         --> enter 3\n";
+	cout << "0- Back                          --> enter 0\n";
+	cout << "1- Check Parallel Lines          --> enter 1\n";
+	cout << "2- Check Same Lines              --> enter 2\n";
+	cout << "3- Check Intersect Lines         --> enter 3\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")
@@ -86,7 +129,7 @@ void lines()
 void segments()
 {
 	Segments seg;
-	cout << "Back             --> enter 0\n";
+	cout << "0- Back             --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")
@@ -107,11 +150,11 @@ void segments()
 void rectangles()
 {
 	Rectangle rec;
-	cout << "Back                                      --> enter 0\n";
-	cout << "Area and Perimeter                        --> enter 1\n";
-	cout << "Check Rechtangles Overlap                 --> enter 2\n";
-	cout << "Check Segments Make Rectangle             --> enter 3\n";
-	cout << "Check if a Point is Inside a Rectangle    --> enter 4\n";
+	cout << "0- Back                                      --> enter 0\n";
+	cout << "1- Area and Perimeter                        --> enter 1\n";
+	cout << "2- Check Rechtangles Overlap                 --> enter 2\n";
+	cout << "3- Check Segments Make Rectangle             --> enter 3\n";
+	cout << "4- Check if a Point is Inside a Rectangle    --> enter 4\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")
@@ -152,7 +195,7 @@ void rectangles()
 void triangles()
 {
 	Triangles tri;
-	cout << "Back              --> enter 0\n";
+	cout << "0- Back              --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")
@@ -173,7 +216,7 @@ void triangles()
 void circles()
 {
 	Circles cir;
-	cout << "Back            --> enter 0\n";
+	cout << "0- Back            --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")
@@ -195,7 +238,7 @@ void circles()
 void quadlitrals()
 {
 	Quadlitrals quad;
-	cout << "Back             --> enter 0\n";
+	cout << "0- Back             --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")
@@ -217,7 +260,7 @@ void quadlitrals()
 void polygons()
 {
 	Polygons pol;
-	cout << "Back          --> enter 0\n";
+	cout << "0- Back          --> enter 0\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")
@@ -238,15 +281,15 @@ void polygons()
 
 void scanShape()
 {
-	cout << "Exit         --> enter 0\n";
-	cout << "Points       --> enter 1\n";
-	cout << "Lines        --> enter 2\n";
-	cout << "Segments     --> enter 3\n";
-	cout << "Rectnagles   --> enter 4\n";
-	cout << "Triangles    --> enter 5\n";
-	cout << "Circles      --> enter 6\n";
-	cout << "Quadlitrals  --> enter 7\n";
-	cout << "Polygons     --> enter 8\n";
+	cout << "0- Exit         --> enter 0\n";
+	cout << "1- Points       --> enter 1\n";
+	cout << "2- Lines        --> enter 2\n";
+	cout << "3- Segments     --> enter 3\n";
+	cout << "4- Rectnagles   --> enter 4\n";
+	cout << "5- Triangles    --> enter 5\n";
+	cout << "6- Circles      --> enter 6\n";
+	cout << "7- Quadlitrals  --> enter 7\n";
+	cout << "8- Polygons     --> enter 8\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0") {}
