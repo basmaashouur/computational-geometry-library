@@ -51,7 +51,7 @@ Rectangle::recpoints  Rectangle::scanCorners()
     }
     else
     {
-        tool.wrongChoice(choice);
+        tool.wrongChoice();
         scanCorners();
 
     }

@@ -1,9 +1,8 @@
 #include "Tools.h"
 
-void Tools::wrongChoice(string cho)
+void Tools::wrongChoice()
 {
-	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-	cout << cho <<  "\n";
+	cout << "\n\n\n";
 	cout << "Please enter a correct choice\n\n";
 
 }
