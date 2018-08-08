@@ -47,6 +47,7 @@ g++ main.o Tools.o Points.o Lines.o Segments.o Rectangle.o Triangles.o Circles.o
 - [Competitive Programming 3](https://cpbook.net/#CP3details)
 - [Programming Challenges](https://www.amazon.com/Programming-Challenges-Contest-Training-Computer/dp/0387001638)
 - [The Art and Craft of Problem Solving](https://www.amazon.com/Art-Craft-Problem-Solving/dp/0471789011The) 
+- [Geometry Handbook](https://vlecomte.github.io/cp-geo.pdf)
 - [Geometry Algorithms](http://geomalgorithms.com/index.html)
 - [Geometry Topics](https://en.wikipedia.org/wiki/List_of_geometry_topics)
 - [GeeksforGeeks](https://www.geeksforgeeks.org/geometric-algorithms/)
