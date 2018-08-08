@@ -25,7 +25,7 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 **Space**|[Fondation](https://math.colorado.edu/courses/CalculusIII/spaces.pdf)<br>[Geometry Symbols](https://www.rapidtables.com/math/symbols/Geometry_Symbols.html) <br>| #
 **Points** | [Points, lines and planes](https://www.mathopenref.com/tocs/pointstoc.html)<br>  [Points and vectors](http://geomalgorithms.com/points_and_vectors.html)<br>[Difference between points and vectors](https://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector)<br> [Point Rotation](https://academo.org/demos/rotation-about-point/)| #
 **Vectors**| [Vectors I](https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/vector-introduction-linear-algebra)<br>[Vectors II](https://www.mathsisfun.com/algebra/vectors.html)<br> [Vector operations](http://hyperphysics.phy-astr.gsu.edu/hbase/vect.html)<br>[Vectors and points](https://github.com/mostafa-saad/ArabicCompetitiveProgramming/blob/master/04%20Math/Computational%20Geometry-02-Point_and_Vector.pdf)<br>[Vector and space](https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length)<br>[Dot & Cross](https://math.stackexchange.com/questions/77/understanding-dot-and-cross-product)| #
-**Lines**| | #
+**Lines**| [Angles](https://www.homeschoolmath.net/teaching/g/angles.php)| #
 **Segments**| | #
 **Triangles** | [Intro to Trigonometry](https://www.mathsisfun.com/algebra/trigonometry.html)| #
 **Rectangles** || #
