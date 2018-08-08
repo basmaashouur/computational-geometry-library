@@ -9,7 +9,7 @@ class Tools
 {
 public:
 	// Function to handle wrong choices
-	void wrongChoice();
+	void wrongChoice(string cho);
 	// Function to clear screen
 	void clearScreen();
 	// Function to make new line

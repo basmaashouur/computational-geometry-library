@@ -82,7 +82,7 @@ void points()
 	}*/
 	else
 	{
-		tool.wrongChoice();
+		tool.wrongChoice(choice);
 		points();
 	}
 
@@ -121,7 +121,7 @@ void lines()
 	}
 	else
 	{
-		tool.wrongChoice();
+		tool.wrongChoice(choice);
 		lines();
 	}
 }
@@ -142,7 +142,7 @@ void segments()
 	}
 	else
 	{
-		tool.wrongChoice();
+		tool.wrongChoice(choice);
 		segments();
 	}
 }
@@ -187,7 +187,7 @@ void rectangles()
 	}
 	else
 	{
-		tool.wrongChoice();
+		tool.wrongChoice(choice);
 		rectangles();
 	}
 }
@@ -208,7 +208,7 @@ void triangles()
 	}
 	else
 	{
-		tool.wrongChoice();
+		tool.wrongChoice(choice);
 		triangles();
 	}
 }
@@ -229,7 +229,7 @@ void circles()
 	}
 	else
 	{
-		tool.wrongChoice();
+		tool.wrongChoice(choice);
 		circles();
 	}
 
@@ -251,7 +251,7 @@ void quadlitrals()
 	}
 	else
 	{
-		tool.wrongChoice();
+		tool.wrongChoice(choice);
 		quadlitrals();
 	}
 
@@ -273,7 +273,7 @@ void polygons()
 	}
 	else
 	{
-		tool.wrongChoice();
+		tool.wrongChoice(choice);
 		polygons();
 	}
 
@@ -303,7 +303,7 @@ void scanShape()
 	else if (choice == "8") {polygons();}
 	else
 	{
-		tool.wrongChoice();
+		tool.wrongChoice(choice);
 		scanShape();
 	}
 }
