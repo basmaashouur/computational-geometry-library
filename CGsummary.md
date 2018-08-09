@@ -28,7 +28,7 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 **Lines**| [Angles](https://www.homeschoolmath.net/teaching/g/angles.php)| #
 **Segments**| | #
 **Triangles** | [Intro to Trigonometry](https://www.mathsisfun.com/algebra/trigonometry.html)| #
-**Rectangles** || #
+**Rectangles** |[Point inside rectangle](https://math.stackexchange.com/questions/190111/how-to-check-if-a-point-is-inside-a-rectangle)| #
 **Circles** || #
 **Quadlitrals** || #
 **Polygons** || #
