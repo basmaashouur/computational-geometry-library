@@ -12,8 +12,8 @@ Table of Contents
    * [Vectors](#vectors)
    * [Lines](#lines)
    * [Segments](#segments)
-   * [Triangles](#triangles)
    * [Rectangles](#rectangles)
+   * [Triangles](#triangles)
    * [Circles](#circles)
    * [Quadrilaterals](#quadrilaterals)
    * [Polygons](#polygons)
@@ -63,7 +63,7 @@ Sup Topic Name   | Resources   | Approximate studying <br> & solving time
 * Two distinct planes perpendicular to the same line must be parallel to each other.
 ## Points
 ### Definitions
-* **Point** is an exact location in space, denoted by a dot and has no size, a location is where (or when) you are. 
+* **Point** is an exact location in space, denoted by a dot and has no size, a location is where (or when) you are.
 * **Collinear** Points that lie on the same straight line.
 ### Methods & Operations
 * **Euclidean distance** Is the ordinary straight-line distance between two points in Euclidean space ![](imgs/eculid.png)
@@ -71,7 +71,7 @@ Sup Topic Name   | Resources   | Approximate studying <br> & solving time
   x′ = xcosθ − ysinθ and y′ = ycosθ + xsinθ, θ is the angle of rotation, in matrix notation:
   ![](imgs/prot.png)
 ### Algorithms
-* **Reflection Point** 
+* **Reflection Point**
 * **Distance To Line**
   * Find the closest point but using vector instead of the normal equations
 * **Distance To Line Segment**
@@ -94,7 +94,7 @@ Sup Topic Name   | Resources   | Approximate studying <br> & solving time
 * **Vector Multiplying by vector**
   * Scalar or dot product:  ![](imgs/dotpr.png)
   * Vector or cross product:
-### Algorithms 
+### Algorithms
 * **Point To Vector**
   * A vector is a line segment (thus it has two end points and length/magnitude, so if we have two points and want to convert to a vector then find the distance between them.
 * **Scale Vector**
@@ -102,7 +102,7 @@ Sup Topic Name   | Resources   | Approximate studying <br> & solving time
 * **Translate Point**
   * Change the place of the point according to a vector
 * **Dot Product**
-  * Computing the angle α between two vectors a and b, a⋅b=|a|⋅|b|⋅cos(α). 
+  * Computing the angle α between two vectors a and b, a⋅b=|a|⋅|b|⋅cos(α).
      * •<0 if the angle is obtuse,
      * •>0 if the angle is acute,
      * •=0 if the a and b are orthogonal.
@@ -129,7 +129,7 @@ Sup Topic Name   | Resources   | Approximate studying <br> & solving time
 * **Determine if a point lies in a line** substitute the values of the point  into the equation of the line y=mx+b, where m & b are known, then If the point satisfies the equation of the line (results in a true equality), then the point is on the line, If you want to know whether the point (x,y)(x,y) is "in between" the two endpoints, make sure that  x1 ≤ x≤ x2 and y1 ≤ y ≤ y2.
 ### Algorithms
 * **Points To Line** You have two points and want to  compute the required line equation
-   * Find the slope, m = ∆y / ∆x 
+   * Find the slope, m = ∆y / ∆x
    * If the line is vertical then the slope is undefined, then the equation would be x = x constant, **Special case**
    * If the line is horizontal then the slope is zero, then the equation would be y = y constant
    * Put the slope and one point into the "Point-Slope Formula y - y1 = m(x - x1)
@@ -144,10 +144,10 @@ Sup Topic Name   | Resources   | Approximate studying <br> & solving time
 * **Parallel Lines**
     * Check if the have the same slope
     * Check if the don't cross
-* **Same Lines** 
+* **Same Lines**
     * Check if the have the same slope
     * Check if they cross
-    * Check if they have the same height 
+    * Check if they have the same height
 * **Intersect Lines**
    * Check if they don't have the same slope (not Parallel)
    * Check they cross on a point
@@ -160,8 +160,8 @@ Sup Topic Name   | Resources   | Approximate studying <br> & solving time
      * Draw a line from that point to the line which is perpendicular, we know the point and the slope
      * Then find the intersection of that perpendicular line and the other line and that would be the closest point
 * **Two Lines Angle**
-  * We can compute the angle aob given three points: a, o, and b, using dot product, Since oa · ob = |oa|×|ob| × cos(θ), we have theta = arccos(oa · ob/(|oa|×|ob|)). 
-  
+  * We can compute the angle aob given three points: a, o, and b, using dot product, Since oa · ob = |oa|×|ob| × cos(θ), we have theta = arccos(oa · ob/(|oa|×|ob|)).
+
 ## Segments
 ### Definitions
 * **Line segment** A straight line which links two points without extending beyond them (has two ends) ![](imgs/segment.png)
@@ -170,13 +170,13 @@ Sup Topic Name   | Resources   | Approximate studying <br> & solving time
 ### Methods & Operations
 ### Algorithms
 * **Intersect Lines Segments**
- 
-## Triangles
+
+## Rectangles
 ### Definitions
 ### Methods & Operations
 ### Algorithms
 
-## Rectangles
+## Triangles
 ### Definitions
 ### Methods & Operations
 ### Algorithms
@@ -195,4 +195,3 @@ Sup Topic Name   | Resources   | Approximate studying <br> & solving time
 ### Definitions
 ### Methods & Operations
 ### Algorithms
-

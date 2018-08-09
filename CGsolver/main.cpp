@@ -110,7 +110,7 @@ void rectangles()
 	Rectangle rec;
 	cout << "0- Back                                      --> enter 0\n";
 	cout << "1- Find Area and Perimeter                   --> enter 1\n";
-	cout << "2- Check if two Rechtangles Overlap          --> enter 2\n";
+	cout << "2- Check if two Rectangles Overlap          --> enter 2\n";
 	cout << "3- Check if four Segments Make Rectangle     --> enter 3\n";
 	cout << "4- Check if a Point is inside a Rectangle    --> enter 4\n";
 	cin >> choice;

@@ -1,7 +1,7 @@
 # Computational Geometry Codes
 
 Table of Contents
-================= 
+=================
  - [Points](#points)
    + [Points Declaration](#points-declaration)
    + [Euclidean Distance](#euclidean-distance)
@@ -33,13 +33,17 @@ Table of Contents
    + [Two Lines Angle](#two-lines-angle)
  - [Segments](#segments)
    + [Intersect Lines Segment](#intersect-lines-segment)
- - [Triangles](#triangles)
  - [Rectangles](#rectangles)
+   + [Area And Perimeter](#area-and-perimeter)
+   + [Rectangles Overlap](#rectangles-overlap)
+   + [Segments Make Rectangle](#segments-make-rectangle)
+   + [Point Inside Rectangle](#point-inside-rectangle)
+ - [Triangles](#triangles)
  - [Circles](#circles)
  - [Quadrilaterals](#quadrilaterals)
  - [Polygons](#polygons)
-     
-   
+
+
 ## Points
 ### Points Declaration
 - If no mush precision needed use this struct
@@ -100,7 +104,7 @@ int main()
 	P.push_back(point(2, 2));
 	cout << P[0].x << " " << P[0].y << endl; // print 2 2
 	sort(P.begin(), P.end()); // comparison operator is defined above
-	
+
 	return 0;
 }
 
@@ -123,10 +127,10 @@ int main()
 }
 ```
 ### Point Rotation
-- We can rotate a point by angle θ counter clockwise around origin (0, 0) by the following code, 
+- We can rotate a point by angle θ counter clockwise around origin (0, 0) by the following code,
 **Insert point code struct above it**
 ```cpp
-#define PI acos(-1.0) 
+#define PI acos(-1.0)
 // important constant; alternative #define PI (2.0 * acos(0.0))
 
 // Angles conversion from 360 to rad
@@ -154,7 +158,7 @@ vec toVec(point a, point b){return vec(b.x - a.x, b.y - a.y);}
 
 point translate(point p, vec v){return point(p.x + v.x , p.y + v.y);}
 
-vec scale(vec v, double s){return vec(v.x * s, v.y * s);} 
+vec scale(vec v, double s){return vec(v.x * s, v.y * s);}
 
 double norm_sq(vec v) { return v.x * v.x + v.y * v.y; }
 
@@ -200,7 +204,7 @@ vec toVec(point a, point b) {return vec(b.x - a.x, b.y - a.y);}
 
 double cross(vec a, vec b) { return a.x * b.y - a.y * b.x; }
 
-bool collinear(point p, point q, point r) 
+bool collinear(point p, point q, point r)
 {
 	return fabs(cross(toVec(p, q), toVec(p, r))) < EPS;
 }
@@ -272,7 +276,7 @@ vec toVec(point a, point b){return vec(b.x - a.x, b.y - a.y);}
 ### Scale Vector
 - Nonnegative s = <1 .. 1 .. >1
 ```cpp
-vec scale(vec v, double s){return vec(v.x * s, v.y * s);} 
+vec scale(vec v, double s){return vec(v.x * s, v.y * s);}
 ```
 ### Translate Point
 -  Translate p according to v
@@ -296,7 +300,7 @@ double norm_sq(vec v) { return v.x * v.x + v.y * v.y; }
 ### Line Declaration
 ```cpp
 // ax + by + c = 0;
-struct line { double a, b, c; }; 
+struct line { double a, b, c; };
 // y = mx + c; m is the slop
 struct line2 { double m, c; };
 ```
@@ -341,12 +345,12 @@ int pointsToLine2(point p1, point p2, line2 &l)
 ### Point To Line
 - Have a slope and a point
 ```cpp
-void pointSlopeToLine(point p, double m, line &l) 
+void pointSlopeToLine(point p, double m, line &l)
 {
 	l.a = -m; // always -m
 	l.b = 1;  // always 1
 	l.c = -((l.a * p.x) + (l.b * p.y));
-} 
+}
 ```
 ### Parallel Lines
 - Have the same slope and have different intercepts
@@ -413,12 +417,12 @@ void closestPoint(line l, point p, point &ans)
 	}
 
 	if (fabs(l.a) < EPS)
-	{	// special case 2: horizontal line; 
+	{	// special case 2: horizontal line;
 		//x of line and point is the same
 		ans.x = p.x; ans.y = -(l.c); return;
 	}
         // normal line
-    	pointSlopeToLine(p, 1 / l.a, perpendicular); 
+    	pointSlopeToLine(p, 1 / l.a, perpendicular);
 	areIntersect(l, perpendicular, ans);
 }
 ```
@@ -433,7 +437,7 @@ double dot(vec a, vec b) { return (a.x * b.x + a.y * b.y); }
 
 double norm_sq(vec v) { return v.x * v.x + v.y * v.y; }
 
-double angle(point a, point o, point b) 
+double angle(point a, point o, point b)
 {  // returns angle aob in rad
 	vec oa = toVec(o, a), ob = toVec(o, b);
 	return acos(dot(oa, ob) / sqrt(norm_sq(oa) * norm_sq(ob)));
@@ -452,7 +456,7 @@ p.push_back(point(x1,y3)); // lower left corner
 ```
 ## Segments
 ### Intersect Lines Segment
-- 
+-
 ```cpp
 bool pointOnSegment(Point p, Point q, Point r)
 {
@@ -483,8 +487,12 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
 	return false;
 }
 ```
-## Triangles
 ## Rectangles
+### Area And Perimeter
+### Rectangles Overlap
+### Segments Make Rectangle
+### Point Inside Rectangle
+## Triangles
 ## Circles
 ## Quadrilaterals
 ## Polygons
