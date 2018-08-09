@@ -63,7 +63,8 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 * Two distinct planes perpendicular to the same line must be parallel to each other.
 ## Points
 ### Definitions
-* **Point** is an exact location in space, denoted by a dot and has no size, a location is where (or when) you are. * **Collinear** Points that lie on the same straight line.
+* **Point** is an exact location in space, denoted by a dot and has no size, a location is where (or when) you are. 
+* **Collinear** Points that lie on the same straight line.
 ### Methods & Operations
 * **Euclidean distance** Is the ordinary straight-line distance between two points in Euclidean space ![](imgs/eculid.png)
 * **Point rotation** to rotate the (x,y) around the origin, the coordinates of the new point would be located at (*x',*y'), where
