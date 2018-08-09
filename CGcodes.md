@@ -36,7 +36,7 @@ Table of Contents
  - [Triangles](#triangles)
  - [Rectangles](#rectangles)
  - [Circles](#circles)
- - [Quadlitrals](#quadlitrals)
+ - [Quadrilaterals](#quadrilaterals)
  - [Polygons](#polygons)
      
    
@@ -129,7 +129,7 @@ int main()
 #define PI acos(-1.0) 
 // important constant; alternative #define PI (2.0 * acos(0.0))
 
-// Angles convertion from 360 to rad
+// Angles conversion from 360 to rad
 double DEG_to_RAD(double d) { return d * PI / 180.0; }
 
 double RAD_to_DEG(double r) { return r * 180.0 / PI; }
@@ -486,5 +486,5 @@ bool doIntersect(Point p1, Point q1, Point p2, Point q2)
 ## Triangles
 ## Rectangles
 ## Circles
-## Quadlitrals
+## Quadrilaterals
 ## Polygons
