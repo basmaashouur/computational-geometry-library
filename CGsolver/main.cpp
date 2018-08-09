@@ -5,7 +5,7 @@
 #include "Rectangle.h"
 #include "Triangles.h"
 #include "Circles.h"
-#include "Quadlitrals.h"
+#include "Quadrilaterals.h"
 #include "Polygons.h"
 
 string choice;
@@ -217,15 +217,15 @@ void polygons()
 
 void scanShape()
 {
-	cout << "0- Exit         --> enter 0\n";
-	cout << "1- Points       --> enter 1\n";
-	cout << "2- Lines        --> enter 2\n";
-	cout << "3- Segments     --> enter 3\n";
-	cout << "4- Rectnagles   --> enter 4\n";
-	cout << "5- Triangles    --> enter 5\n";
-	cout << "6- Circles      --> enter 6\n";
-	cout << "7- Quadlitrals  --> enter 7\n";
-	cout << "8- Polygons     --> enter 8\n";
+	cout << "0- Exit           --> enter 0\n";
+	cout << "1- Points         --> enter 1\n";
+	cout << "2- Lines          --> enter 2\n";
+	cout << "3- Segments       --> enter 3\n";
+	cout << "4- Rectnagles     --> enter 4\n";
+	cout << "5- Triangles      --> enter 5\n";
+	cout << "6- Circles        --> enter 6\n";
+	cout << "7- Quadrilaterals --> enter 7\n";
+	cout << "8- Polygons       --> enter 8\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0") {}
