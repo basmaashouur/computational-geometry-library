@@ -87,21 +87,21 @@ void lines()
 void segments()
 {
 	Segments seg;
-	cout << "0- Back             --> enter 0\n";
+	cout << "0- Back                              --> enter 0\n";
+	cout << "1- Find if two Segments intersect    --> enter 1\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")scanShape();
-	else if (choice == "1") {}
+	else if (choice == "1") seg.areIntersectSeg();
 	else
 	{
 		tool.wrongChoice(choice);
 		segments();
 	}
-	if (choice > "0" && choice < "1")
+	if (choice > "0" && choice < "2")
 	{
 		tool.makeEndl();
 		segments();
-
 	}
 }
 
@@ -109,10 +109,10 @@ void rectangles()
 {
 	Rectangle rec;
 	cout << "0- Back                                      --> enter 0\n";
-	cout << "1- Area and Perimeter                        --> enter 1\n";
-	cout << "2- Check Rechtangles Overlap                 --> enter 2\n";
-	cout << "3- Check Segments Make Rectangle             --> enter 3\n";
-	cout << "4- Check if a Point is Inside a Rectangle    --> enter 4\n";
+	cout << "1- Find Area and Perimeter                   --> enter 1\n";
+	cout << "2- Check if two Rechtangles Overlap          --> enter 2\n";
+	cout << "3- Check if four Segments Make Rectangle     --> enter 3\n";
+	cout << "4- Check if a Point is inside a Rectangle    --> enter 4\n";
 	cin >> choice;
 	tool.clearScreen();
 	if (choice == "0")scanShape();

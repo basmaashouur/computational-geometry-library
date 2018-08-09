@@ -121,9 +121,9 @@ void Lines::areIntersect()
 	cout << "Enter the second line\n";
 	l2 = scanLine();
 	check = areIntersect(l1, l2, p);
-	if (check)cout << "The two lines are intersect in point ("
+	if (check)cout << "The two lines intersect in point ("
 		               << p.x << ", " << p.y << "\n";
-	else cout << "The two lines are not intersect\n";
+	else cout << "The two lines does not intersect\n";
 }
 
 void Lines::closestPoint(line l, point p, point &ans)

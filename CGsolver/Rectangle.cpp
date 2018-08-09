@@ -3,9 +3,9 @@
 
 //Rectangle::Rectangle() {}
 
-Rectangle::recpoints::recpoints() {};
+recpoints::recpoints() {};
 
-Rectangle::recpoints  Rectangle::scanCorners()
+recpoints  Rectangle::scanCorners()
 {
     cout << "How you wanna enter the rectanagle corners?\n\n";
     cout << "Upper*Left********Upper*right\n";
@@ -58,20 +58,23 @@ Rectangle::recpoints  Rectangle::scanCorners()
     return points;
 }
 
-void Rectangle::areaAndPerimeter()
+void Rectangle::areaAndPerimeter(recpoints rec1, double &hight, double &width)
 {
-    recpoints rec1;
-    Points points;
-    double hight, width;
-    rec1 = scanCorners();
-
     // take the points from the rectangle and call an object from struct point
     point p1 (rec1.x1, rec1.y1);
     point p2 (rec1.x2, rec1.y2);
     point p3 (rec1.x3, rec1.y3);
     // find the distance between two points to find the hight and width and call the function dist
-    width = points.dist(p1, p2);
-    hight = points.dist(p2, p3);
+    width = points1.dist(p1, p2);
+    hight = points1.dist(p2, p3);
+
+}
+void Rectangle::areaAndPerimeter()
+{
+    cout << "1- Find Area and Perimeter\n\n";
+    recpoints rec1; double hight, width;
+    rec1 = scanCorners();
+    areaAndPerimeter(rec1, hight, width);
 
     cout << "The Area of the rectangle that has width = " << width << " & hight = "
          << hight << " is " << hight*width << endl;
@@ -79,9 +82,15 @@ void Rectangle::areaAndPerimeter()
          << hight << " is " << 2 * hight + 2 * width << endl;
 
 }
+void Rectangle::overlapRectangles(recpoints rec1, recpoints rec2)
+{
+
+}
+
 
 void Rectangle::overlapRectangles()
 {
+    cout << "2- Check if two Rechtangles Overlap\n\n";
     recpoints rec1, rec2;
     cout << "Enter the first rectangle\n";
     rec1 = scanCorners();
@@ -89,12 +98,37 @@ void Rectangle::overlapRectangles()
     rec2 = scanCorners();
 
 }
+void Rectangle::segmentsMakeRectangle(segment s1, segment s2, segment s3, segment s4)
+{
+
+}
 
 void Rectangle::segmentsMakeRectangle()
+{
+    cout << "3- Check if four Segments Make Rectangle\n\n";
+    segment s1, s2, s3, s4;
+    cout << "Enter the first Segment\n";
+    s1 = seg.scanSegment();
+    cout << "Enter the second Segment\n";
+    s2 = seg.scanSegment();
+    cout << "Enter the third Segment\n";
+    s3 = seg.scanSegment();
+    cout << "Enter the forth Segment\n";
+    s4 = seg.scanSegment();
+    segmentsMakeRectangle(s1, s2, s3, s4);
+
+}
+void Rectangle::pointInsideRectangle(recpoints rec1, point p1)
 {
 
 }
 void Rectangle::pointInsideRectangle()
 {
+
+    cout << "4- Check if a Point is inside a Rectangle\n\n";
+    recpoints rec1; point p1;
+    rec1 = scanCorners();
+    p1 = points1.scanPoint();
+    pointInsideRectangle(rec1, p1);
 
 }
