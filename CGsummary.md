@@ -1,4 +1,4 @@
-# List of Computational Geometry Sup topic's Resources, Tags, Terminologies and Explanations
+# List of Computational Geometry Resources, Tags, Terminologies and Explanations
 
 Table of Contents
 =================
@@ -15,12 +15,12 @@ Table of Contents
    * [Triangles](#triangles)
    * [Rectangles](#rectangles)
    * [Circles](#circles)
-   * [Quadlitrals](#quadlitrals)
+   * [Quadrilaterals](#quadrilaterals)
    * [Polygons](#polygons)
 
 ## Resources And Approximate Time
 
-Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
+Sup Topic Name   | Resources   | Approximate studying <br> & solving time
 -------------| -------------   |-------------   
 **Space**|[Fondation](https://math.colorado.edu/courses/CalculusIII/spaces.pdf)<br>[Geometry Symbols](https://www.rapidtables.com/math/symbols/Geometry_Symbols.html) <br>| #
 **Points** | [Points, lines and planes](https://www.mathopenref.com/tocs/pointstoc.html)<br>  [Points and vectors](http://geomalgorithms.com/points_and_vectors.html)<br>[Difference between points and vectors](https://math.stackexchange.com/questions/645672/what-is-the-difference-between-a-point-and-a-vector)<br> [Point Rotation](https://academo.org/demos/rotation-about-point/)| #
@@ -30,7 +30,7 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 **Triangles** | [Intro to Trigonometry](https://www.mathsisfun.com/algebra/trigonometry.html)| #
 **Rectangles** |[Point inside rectangle](https://math.stackexchange.com/questions/190111/how-to-check-if-a-point-is-inside-a-rectangle)| #
 **Circles** || #
-**Quadlitrals** || #
+**Quadrilaterals** || #
 **Polygons** || #
 
 
@@ -40,7 +40,7 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 - Triangles (Euclidean plane geometry)
 - Rectangles (Euclidean plane geometry)
 - Circles (Euclidean plane geometry)
-- Quadlitrals (Euclidean plane geometry)
+- Quadrilaterals (Euclidean plane geometry)
 - Polygons (Euclidean plane geometry)
 
 ## Sup Topic Terminologies And Explanations
@@ -73,7 +73,7 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 ### Algorithms
 * **Reflection Point** 
 * **Distance To Line**
-  * Find the closet point but using vector instead of the normal equations
+  * Find the closest point but using vector instead of the normal equations
 * **Distance To Line Segment**
   * If the perpendicular line point from the point is on the line segment then find normal closet point
   * If the perp point not in the line segment then the answer would be the first point or the second of the segment
@@ -98,7 +98,7 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 * **Point To Vector**
   * A vector is a line segment (thus it has two end points and length/magnitude, so if we have two points and want to convert to a vector then find the distance between them.
 * **Scale Vector**
-  * We can scale(change size) a vector by some value by multiplyng the vector by that scale.
+  * We can scale(change size) a vector by some value by multiplying the vector by that scale.
 * **Translate Point**
   * Change the place of the point according to a vector
 * **Dot Product**
@@ -130,7 +130,7 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 ### Algorithms
 * **Points To Line** You have two points and want to  compute the required line equation
    * Find the slope, m = ∆y / ∆x 
-   * If the line is vertical then the slope is undifend, then the equation would be x = x constant, **Special case**
+   * If the line is vertical then the slope is undefined, then the equation would be x = x constant, **Special case**
    * If the line is horizontal then the slope is zero, then the equation would be y = y constant
    * Put the slope and one point into the "Point-Slope Formula y - y1 = m(x - x1)
    * Simplify to get the line equation ax + by + c
@@ -147,18 +147,18 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 * **Same Lines** 
     * Check if the have the same slope
     * Check if they cross
-    * Check if they have the same hight 
+    * Check if they have the same height 
 * **Intersect Lines**
    * Check if they don't have the same slope (not Parallel)
    * Check they cross on a point
-   * Find that point they cross in by sloving the two linear algebraic equations togther
-* **Closet Point To Line**
+   * Find that point they cross in by solving the two linear algebraic equations together
+* **closest Point To Line**
    * I have a point and a line and  I wanna find a point lie in that line that the closet to that point
    * If the line is vertical then the y of the closet point is the same as the line, and x = -c
    * If the line is horizontal then the x of the closet point is the same as the line, and y = -c
    * If the line is normal:
      * Draw a line from that point to the line which is perpendicular, we know the point and the slope
-     * Then find the intersection of that perpendicular line and the other line and that would be the closet point
+     * Then find the intersection of that perpendicular line and the other line and that would be the closest point
 * **Two Lines Angle**
   * We can compute the angle aob given three points: a, o, and b, using dot product, Since oa · ob = |oa|×|ob| × cos(θ), we have theta = arccos(oa · ob/(|oa|×|ob|)). 
   
@@ -186,7 +186,7 @@ Sup Topic Name   | Resources   | Approximate stydying <br> & solving time
 ### Methods & Operations
 ### Algorithms
 
-## Quadlitrals
+## Quadrilaterals
 ### Definitions
 ### Methods & Operations
 ### Algorithms
