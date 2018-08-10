@@ -32,7 +32,7 @@ cd ComputationalGeometryLibrary/CGsolver
 ```
 - Compile the files 
 ```console
-g++ -c main.cpp Tools.cpp Points.cpp Lines.cpp Segments.cpp Rectangle.cpp Triangles.cpp Circles.cpp Quadlitrals.cpp Polygons.cpp
+g++ -c main.cpp Tools.cpp Points.cpp Lines.cpp Segments.cpp Rectangle.cpp Triangles.cpp Circles.cpp Quadrilaterals.cpp Polygons.cpp
 ```
 - This produces a .o files, We can then link them using
 ```console
